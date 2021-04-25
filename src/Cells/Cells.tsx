@@ -11,6 +11,8 @@ const Container = styled.div`
   flex-direction: column;
   height: calc(100% - 124px);
   overflow-y: auto;
+  margin-right: -16px;
+  padding-right: 16px;
 
   ${CardContainerStyle} {
     margin-top: 4px;

@@ -31,8 +31,6 @@ const Button = styled.button`
   color: #ffffff;
   border: none;
   outline: none;
-  background: #5a3472;
-  border-radius: 4px;
   padding: 10px 0px;
   width: 100%;
   margin-top: 10px;
