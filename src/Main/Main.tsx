@@ -47,7 +47,7 @@ export const Main = () => {
   const [cells, setCells] = useState<CellsProps['cells']>([]);
 
   const handleClick = () => {
-    const newCellType = Math.random() > RANDOM_CHANCE ? CellType.death : CellType.alive;
+    const newCellType = Math.random() > RANDOM_CHANCE ? CellType.dead : CellType.alive;
     const newCell = { type: newCellType, id: uniqueId() };
     const newCells = [newCell, ...cells];
 
@@ -55,12 +55,12 @@ export const Main = () => {
       if (newCells[1].type === CellType.alive && newCells[2].type === CellType.alive) {
         newCells[0].type = CellType.life;
       } else if (
-        newCells[0]?.type === CellType.death &&
-        newCells[1]?.type === CellType.death &&
-        newCells[2]?.type === CellType.death &&
+        newCells[0]?.type === CellType.dead &&
+        newCells[1]?.type === CellType.dead &&
+        newCells[2]?.type === CellType.dead &&
         newCells[3]?.type === CellType.life
       ) {
-        newCells[3].type = CellType.death;
+        newCells[3].type = CellType.dead;
       }
     }
 

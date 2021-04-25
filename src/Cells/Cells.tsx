@@ -22,12 +22,12 @@ const Container = styled.div`
 
 export enum CellType {
   alive = 'alive',
-  death = 'death',
+  dead = 'dead',
   life = 'life',
 }
 
-const cells = {
-  death: {
+const cells: { [key in CellType]: CellProps } = {
+  dead: {
     title: 'Мёртвая',
     label: 'или прикидывается',
     icon: Icon.scull,
